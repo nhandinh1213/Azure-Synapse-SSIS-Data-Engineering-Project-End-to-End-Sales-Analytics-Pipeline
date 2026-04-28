@@ -154,6 +154,8 @@ The final step is loading the fact table (`fact_sales`).
 * Analytical logic handled separately using **Serverless SQL**
 
 👉 This reflects a modern ELT-style architecture.
+<img width="1415" height="275" alt="image" src="https://github.com/user-attachments/assets/db1ad91d-1fde-43f4-9974-ef8e0fa2ef3b" />
+
 
 ---
 
