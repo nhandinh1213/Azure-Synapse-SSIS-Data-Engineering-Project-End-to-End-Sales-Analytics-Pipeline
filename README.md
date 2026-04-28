@@ -2,7 +2,16 @@
 This project demonstrates the transition from a traditional on-premise ETL pipeline built with SSIS to a modern cloud-based data ingestion pipeline using Azure Synapse Analytics.
 The goal is to show how a legacy data processing workflow can be gradually modernized into a scalable cloud architecture.
 
-## SSIS ETL Workflow Description
+## 🏗️ Architecture Evolution
+Phase 1 (On-Prem): 
+CSV → SSIS → SQL Server (Data Warehouse)
+
+        ↓ Migration
+
+Phase 2 (Cloud): 
+CSV → Synapse Pipeline → Data Lake (Silver) → Serverless SQL (Gold)
+
+# 🔵Phase 1- SSIS ETL (On-prem)
 ## 🔄 SSIS ETL Pipeline – End-to-End Workflow
 <img width="1184" height="663" alt="image" src="https://github.com/user-attachments/assets/2184f2a4-24d7-453e-ba2e-bbfcea6e7540" />
 
@@ -132,4 +141,55 @@ The final step is loading the fact table (`fact_sales`).
 * Full refresh for dimension tables
 * Incremental load for fact table
 * Sequential execution to maintain data integrity
+
+# 🔵 Phase 2 – Azure Synapse (Cloud Ingestion)
+
+* Built a Synapse pipeline using **Copy Activities**
+* Loaded raw CSV data into a **Silver layer in Data Lake**
+* Pipeline responsibilities:
+
+  * Data ingestion
+  * Data movement (Raw → Silver)
+* No complex transformation in pipeline
+* Analytical logic handled separately using **Serverless SQL**
+
+👉 This reflects a modern ELT-style architecture.
+
+---
+
+## 🧠 Key Differences
+
+| Aspect         | SSIS (On-Prem) | Synapse (Cloud) |
+| -------------- | -------------- | --------------- |
+| Processing     | ETL            | ELT             |
+| Transformation | In pipeline    | In SQL layer    |
+| Storage        | SQL Server     | Data Lake       |
+| Complexity     | High           | Lightweight     |
+| Scalability    | Limited        | Scalable        |
+
+---
+
+## 🔗 How They Connect
+
+* SSIS handles **structured data warehouse modeling**
+* Synapse handles **cloud-based ingestion and storage**
+* Together, they simulate a **hybrid data platform**
+
+---
+
+## 🚀 Key Takeaways
+
+* Experience with both **legacy (SSIS)** and **modern (Synapse)** data platforms
+* Understanding of **ETL vs ELT paradigms**
+* Ability to design **data warehouse models and data lake architectures**
+* Demonstrated knowledge of **migration mindset (on-prem → cloud)**
+
+---
+
+## 🔮 Future Improvements
+* Implement incremental loading in Synapse
+* Introduce data partitioning strategy
+* Add monitoring and logging
+
+
 
