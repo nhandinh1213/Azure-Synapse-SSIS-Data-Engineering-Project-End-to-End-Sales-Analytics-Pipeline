@@ -1,4 +1,6 @@
 # From On-Prem ETL to Cloud Data Platform
+This project demonstrates the transition from a traditional on-premise ETL pipeline built with SSIS to a modern cloud-based data ingestion pipeline using Azure Synapse Analytics.
+The goal is to show how a legacy data processing workflow can be gradually modernized into a scalable cloud architecture.
 
 ## SSIS ETL Workflow Description
 ## 🔄 SSIS ETL Pipeline – End-to-End Workflow
